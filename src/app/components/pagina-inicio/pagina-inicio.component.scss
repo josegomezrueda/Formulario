@@ -1,0 +1,15 @@
+.contenedor{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 50px;
+    font-family: Arial;
+}
+table > div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}

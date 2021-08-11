@@ -1,0 +1,15 @@
+<div class="contenedor">
+    <div class="boton">
+        <button routerLink='/formulario'>Mostrar formulario</button>
+    </div>
+    <table>
+        <div>
+            <div><th>ID - Usuario - Apellido</th></div>
+            <div>
+                <div>
+                    <app-fila *ngFor="let res of reqresponse" [objetoFila]="res"></app-fila>
+                </div>
+            </div>
+        </div>
+    </table>
+</div>

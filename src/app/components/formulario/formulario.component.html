@@ -1,0 +1,60 @@
+<div class="contenedor">
+    <div>
+        <h1>FORMULARIO</h1>
+    </div>
+    <div class="formulario">
+        <form (submit)="submit()" [formGroup]="registerForm">
+            <div>
+                <div class="enlinea1"><label>Usuario</label></div>
+                <div class="enlinea2"><input type="text" id="filanombre" required="" formControlName="username"></div>
+            </div>
+            <div>
+                <div class="enlinea1"><label>Apellido</label></div>
+                <div class="enlinea2"><input type="text" id="filaapellido" required="" formControlName="surname"></div>
+            </div>
+            <div>
+                <div class="enlinea1"><label>Contraseña</label></div>
+                <div class="enlinea2"><input type="password" id="filacontrasena" required="" formControlName="password">
+                </div>
+            </div>
+            <div>
+                <div class="enlinea1"><label>Email de la compañía</label></div>
+                <div class="enlinea2"><input type="email" id="filaemailcompany" required=""
+                        formControlName="emailcompany">
+                </div>
+            </div>
+            <div>
+                <div class="enlinea1"><label>Email personal</label></div>
+                <div class="enlinea2"><input type="email" id="filaemailpersonal" required=""
+                        formControlName="emailpersonal"></div>
+            </div>
+            <div>
+                <div class="enlinea1"><label>Ciudad</label></div>
+                <div class="enlinea2"><input type="text" id="ciudad" required="" formControlName="city"></div>
+            </div>
+            <div>
+                <div class="enlinea1"><label>url de la imagen</label></div>
+                <div class="enlinea2"><input type="text" id="urlimagen" required="" formControlName="urlimagen"></div>
+            </div>
+            <div>
+                <div class="enlinea1"><label>Fecha creación</label></div>
+                <div class="enlinea2"><input type="datetime" id="date_created" required=""
+                        formControlName="datecreated">
+                </div>
+            </div>
+            <div>
+                <div class="enlinea1"><label>Activado</label></div>
+                <div class="enlinea2"><input type="checkbox" id="activated" required="" formControlName="activated">
+                </div>
+            </div>
+            <div>
+                <div class="enlinea1"><label>Fecha finalización</label></div>
+                <div class="enlinea2"><input type="datetime" id="date_termination" required=""
+                        formControlName="datetermination"></div>
+            </div>
+            <div class="boton">
+                <div><button type="submit">Enviar</button></div>
+            </div>
+        </form>
+    </div>
+</div>
