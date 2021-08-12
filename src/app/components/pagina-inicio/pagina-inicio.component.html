@@ -1,15 +1,12 @@
-<div class="contenedor">
-    <div class="boton">
-        <button routerLink='/formulario'>Mostrar formulario</button>
-    </div>
-    <table>
+<div class='contenedor'>
+    <div class='contador'>
         <div>
-            <div><th>ID - Usuario - Apellido</th></div>
-            <div>
-                <div>
-                    <app-fila *ngFor="let res of reqresponse" [objetoFila]="res"></app-fila>
-                </div>
-            </div>
+            <mat-icon matBadge={{contador}} matBadgeColor="warn">home</mat-icon>
         </div>
-    </table>
+    </div>
+    <div class="infodata">
+        <div class="user">
+            <app-fila *ngFor="let res of reqresponse" [objetoFila]="res" (miEvento)="getMensaje($event)" (miEventoBorrar)="deleteElement($event)"></app-fila>
+        </div>
+    </div>
 </div>

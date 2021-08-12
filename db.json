@@ -1,0 +1,56 @@
+{
+  "personas": [
+    {
+      "id_persona": 1,
+      "user": "lolilillo",
+      "password": "Jose",
+      "surname": "Gomez",
+      "company_email": "joselillo@gmail.com",
+      "personal_email": "josetrabajo@gmail.com",
+      "city": "Jaen",
+      "active": true,
+      "created_date": "2020-08-12T00:00:00.000+00:00",
+      "imagen_url": "foro",
+      "termination_date": "2021-04-12T00:00:00.000+00:00"
+    },
+    {
+      "id_persona": 2,
+      "user": "lolilillo",
+      "password": "Jose",
+      "surname": "Gomez",
+      "company_email": "joselillo@gmail.com",
+      "personal_email": "josetrabajo@gmail.com",
+      "city": "Jaen",
+      "active": true,
+      "created_date": "2020-08-12T00:00:00.000+00:00",
+      "imagen_url": "foro",
+      "termination_date": "2021-04-12T00:00:00.000+00:00"
+    },
+    {
+      "id_persona": 3,
+      "user": "lolilillo",
+      "password": "Jose",
+      "surname": "Gomez",
+      "company_email": "joselillo@gmail.com",
+      "personal_email": "josetrabajo@gmail.com",
+      "city": "Jaen",
+      "active": true,
+      "created_date": "2020-08-12T00:00:00.000+00:00",
+      "imagen_url": "foro",
+      "termination_date": "2021-04-12T00:00:00.000+00:00"
+    },
+    {
+      "id_persona": 4,
+      "user": "lolilillo",
+      "password": "Jose",
+      "surname": "Gomez",
+      "company_email": "joselillo@gmail.com",
+      "personal_email": "josetrabajo@gmail.com",
+      "city": "Jaen",
+      "active": true,
+      "created_date": "2020-08-12T00:00:00.000+00:00",
+      "imagen_url": "foro",
+      "termination_date": "2021-04-12T00:00:00.000+00:00"
+    }
+  ]
+}

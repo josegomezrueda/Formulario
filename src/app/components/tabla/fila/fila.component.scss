@@ -1,0 +1,22 @@
+.datauser{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    background-color: white;
+    border : 1px solid;
+    border-radius: 15px;
+    margin: 15px;
+}
+
+.editarborrar{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap:10px;
+}
+
+.datauser > div {
+    margin: 5px;
+}

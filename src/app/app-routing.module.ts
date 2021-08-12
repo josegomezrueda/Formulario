@@ -16,6 +16,10 @@ const routes: Routes = [
   {
     path: 'formulario',
     component: FormularioComponent
+  },
+  {
+    path: 'editar/:id',
+    component: FormularioComponent
   }
 ];
 
