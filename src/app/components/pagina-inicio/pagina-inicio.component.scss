@@ -1,5 +1,20 @@
 .contenedor{
     display: flex;
+    flex-direction: column;
+}
+
+
+
+.contenedor .contador {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 30px;
+}
+
+.infodata{
+    display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
@@ -7,9 +22,14 @@
     margin-top: 50px;
     font-family: Arial;
 }
-table > div {
+
+.user{
+ display: flex;
+ flex-direction: row;
+}
+
+.datos{
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    gap: 10px;
 }
+

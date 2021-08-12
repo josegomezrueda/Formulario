@@ -1,3 +1,16 @@
-<div>
-    {{ objetoFila.id_persona}} - {{ objetoFila.user}} - {{ objetoFila.surname}}
+<div class="datauser">
+    <div>
+        <b>ID:  </b>{{objetoFila.id_persona}}
+    </div>
+    <div>
+        <b>NOMBRE:  </b>{{objetoFila.user}}
+    </div>
+    <div>
+        <b>APELLIDO:  </b>{{objetoFila.surname}}
+    </div>
+    <div class = editarborrar>
+        <div><button (click)="editardato()">Editar</button></div>
+        <div><button (click)="eliminardato()">Eliminar</button></div>
+    </div>
 </div>
+
