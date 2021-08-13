@@ -42,27 +42,25 @@ export class FormularioComponent implements OnInit {
       if (!this.id) return;
       this.usuarioService.cargarUsuario(this.id).subscribe(resultado => {
         this.persona = resultado;
-        console.log(this.persona)
         this.registerForm.patchValue(this.persona)
-
       })
     })
   }
 
   public enviardato() {
     this.persona = this.registerForm.value;
-    if(this.id){
-    this.persona.id_persona = this.id
-    this.usuarioService.editarUsuario(this.persona).subscribe(response => {
-      this.persona = response
-    })
-    }else{
-      this.persona = this.registerForm.value;
+    if (this.id) {
       this.persona.id_persona = this.id
+      this.usuarioService.editarUsuario(this.persona).subscribe(response => {
+        this.persona = response
+      })
+    } else {
+      //this.persona = this.registerForm.value;
+      //this.persona.id_persona = this.id
       this.usuarioService.crearUsuario(this.persona).subscribe(response => {
         this.persona = response
       })
     }
-    }
   }
+}
 

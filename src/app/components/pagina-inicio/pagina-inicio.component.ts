@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ReqResResponse } from 'src/app/interface/reqres-response';
+import { ContadorOperacionesService } from 'src/app/services/contador-operaciones.service';
 import { UsuariosService } from 'src/app/services/usuarios.service';
 
 
@@ -12,11 +13,11 @@ import { UsuariosService } from 'src/app/services/usuarios.service';
 })
 export class PaginaInicioComponent implements OnInit {
   reqresponse: ReqResResponse[] = [];
-  contador: number = 0;
   
   constructor(
     private readonly router: Router,
-    private readonly usuariosService: UsuariosService
+    private readonly usuariosService: UsuariosService,
+    private readonly contadorOperaciones: ContadorOperacionesService
   ) {}
 
   ngOnInit(): void {
@@ -27,13 +28,8 @@ export class PaginaInicioComponent implements OnInit {
       })
   }
 
-  getMensaje(evento: any) {
-    
-
-  }
   deleteElement(evento:number) {
-    console.log(evento, "deleteElement")
     this.reqresponse = this.reqresponse.filter((persona: ReqResResponse) => persona.id_persona !== evento )
-    this.contador++;
+    this.contadorOperaciones.increment()
   }
 }
