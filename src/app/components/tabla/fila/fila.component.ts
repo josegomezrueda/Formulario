@@ -18,10 +18,8 @@ export class FilaComponent implements OnInit {
   constructor(private router: Router, private readonly usuariosService: UsuariosService) { }
 
   editardato() {
-    //this.miEventoEditar.emit(this.objetoFila);
     this.id= this.objetoFila.id_persona;
     this.router.navigate(['/editar', this.id]);
-   
       }
 
   eliminardato(){
