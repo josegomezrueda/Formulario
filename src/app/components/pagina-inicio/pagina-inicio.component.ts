@@ -31,5 +31,6 @@ export class PaginaInicioComponent implements OnInit {
   deleteElement(evento:number) {
     this.reqresponse = this.reqresponse.filter((persona: ReqResResponse) => persona.id_persona !== evento )
     this.contadorOperaciones.increment()
+    this.contadorOperaciones.increment2()
   }
 }

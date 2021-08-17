@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, NgControlStatus } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ReqResResponse, ReqResResponse_BLANK } from 'src/app/interface/reqres-response';
 import { UsuariosService } from 'src/app/services/usuarios.service';
 
@@ -17,6 +17,7 @@ export class FormularioComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder,
     private route: ActivatedRoute,
+    private router:Router,
     private readonly usuarioService: UsuariosService) { }
 
   registerForm = this.formBuilder.group({
@@ -52,15 +53,16 @@ export class FormularioComponent implements OnInit {
     if (this.id) {
       this.persona.id_persona = this.id
       this.usuarioService.editarUsuario(this.persona).subscribe(response => {
-        this.persona = response
+        this.persona = response;
+        this.router.navigate(['/pagina-inicio'])
       })
     } else {
-      //this.persona = this.registerForm.value;
-      //this.persona.id_persona = this.id
       this.usuarioService.crearUsuario(this.persona).subscribe(response => {
-        this.persona = response
+        this.persona = response;
+        this.router.navigate(['/pagina-inicio'])
       })
     }
+    
   }
 }
 
