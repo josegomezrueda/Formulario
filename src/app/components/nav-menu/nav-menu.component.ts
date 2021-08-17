@@ -7,15 +7,21 @@ import { ContadorOperacionesService } from 'src/app/services/contador-operacione
   styleUrls: ['./nav-menu.component.scss']
 })
 export class NavMenuComponent implements OnInit {
-
-  public contador: number=0;
-  constructor(private readonly contadorOperaciones: ContadorOperacionesService) { 
-    this.contadorOperaciones.resultadoContador.subscribe(contador =>{
-      this.contador=contador;
-    })
+  public contador2: number = 0;
+  public contador: number = 0;
+  constructor(private readonly contadorOperaciones: ContadorOperacionesService) {
+    this.contadorOperaciones.resultadoContador.subscribe(contador => {
+      this.contador = contador;
+    }),
+      this.contadorOperaciones.resultadoContador2.subscribe(contador2 => {
+        this.contador2 = parseInt(localStorage.getItem('Contador2') || '');
+      })
   }
 
   ngOnInit(): void {
-  }
 
+    this.contador2 = parseInt(localStorage.getItem('Contador2') || '');
+
+  }
 }
+

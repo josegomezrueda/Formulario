@@ -1,3 +1,4 @@
+import { NumberInput } from '@angular/cdk/coercion';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
 import { ReqResResponse, ReqResResponse_BLANK } from 'src/app/interface/reqres-response';
@@ -15,7 +16,9 @@ export class FilaComponent implements OnInit {
   @Output() miEventoBorrar = new EventEmitter<any>();
 
   id=0;
-  constructor(private router: Router, private readonly usuariosService: UsuariosService) { }
+  constructor(private router: Router, private readonly usuariosService: UsuariosService) { 
+    
+  }
 
   editardato() {
     this.id= this.objetoFila.id_persona;
@@ -25,10 +28,8 @@ export class FilaComponent implements OnInit {
   eliminardato(){
     this.id= this.objetoFila.id_persona;
     this.usuariosService.borrarUsuario(this.id).subscribe();
-    console.log(this.id,"eliminardato");
     this.miEventoBorrar.emit(this.id);
-    
-  }
+    }
   
   ngOnInit(): void {
   }
