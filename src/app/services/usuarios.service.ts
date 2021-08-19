@@ -30,7 +30,6 @@ export class UsuariosService {
   }
   crearUsuario(persona: ReqResResponse): Observable<ReqResResponse> {
     const url = 'http://localhost:3000/personas/';
-    console.log(persona, "crearuser")
     return this.http.post<ReqResResponse>(url, persona);
   }
 }
