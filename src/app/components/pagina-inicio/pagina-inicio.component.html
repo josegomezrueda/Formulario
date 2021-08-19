@@ -1,6 +1,8 @@
 <div class="infodata">
     <div class="user">
-        <app-fila *ngFor="let res of reqresponse" [objetoFila]="res" (miEventoBorrar)="deleteElement($event)">
-        </app-fila>
+        <app-fila *ngFor="let res of reqresponse" [objetoFila]="res" (miEventoBorrar)="deleteElement($event)" ></app-fila>
     </div>
-</div>
+    <div>
+        <div><button mat-raised-button (click)="openDialog()" >Crear Usuario</button></div>
+    </div>
+</div> 

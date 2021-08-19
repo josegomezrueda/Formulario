@@ -56,6 +56,7 @@ import { PaginaInicioComponent } from './components/pagina-inicio/pagina-inicio.
 import { FilaComponent } from './components/tabla/fila/fila.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
+import { DialogOverviewFormComponent } from './components/dialog-overview-form/dialog-overview-form.component';
 
 
 @NgModule({
@@ -64,7 +65,8 @@ import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
     FormularioComponent,
     PaginaInicioComponent,
     FilaComponent,
-    NavMenuComponent
+    NavMenuComponent,
+    DialogOverviewFormComponent
 
   ],
   imports: [
