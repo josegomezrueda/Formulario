@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-import { ReqResResponse } from 'src/app/interface/reqres-response';
+import { Persona } from 'src/app/interface/reqres-response';
 import { ContadorOperacionesService } from 'src/app/services/contador-operaciones.service';
 import { UsuariosService } from 'src/app/services/usuarios.service';
 import { DialogOverviewFormComponent } from '../dialog-overview-form/dialog-overview-form.component';
@@ -12,9 +12,8 @@ import { DialogOverviewFormComponent } from '../dialog-overview-form/dialog-over
   styleUrls: ['./pagina-inicio.component.scss']
 })
 export class PaginaInicioComponent implements OnInit {
-  reqresponse: ReqResResponse[] = [];
-  animal: string = '';
-  name: string = '';
+  reqresponse: Persona[] = [];
+
   constructor(
     private readonly router: Router,
     private readonly usuariosService: UsuariosService,
@@ -27,14 +26,14 @@ export class PaginaInicioComponent implements OnInit {
   }
 
   deleteElement(evento: number) {
-    this.reqresponse = this.reqresponse.filter((persona: ReqResResponse) => persona.id_persona !== evento)
+    this.reqresponse = this.reqresponse.filter((persona: Persona) => persona.id !== evento)
     this.contadorOperaciones.increment()
     this.contadorOperaciones.increment2()
   }
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogOverviewFormComponent, {
-      width: '250px',
+      width: '300px',
       data: { personas: this.reqresponse }
 
     });
@@ -56,7 +55,7 @@ export class PaginaInicioComponent implements OnInit {
 
   private cargarDatos(): void {
     this.usuariosService.cargarUsuarios()
-      .subscribe((resp: ReqResResponse[]) => {
+      .subscribe((resp: Persona[]) => {
         this.reqresponse = resp;
       })
   }
