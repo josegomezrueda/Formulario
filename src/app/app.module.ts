@@ -57,6 +57,9 @@ import { FilaComponent } from './components/tabla/fila/fila.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
 import { DialogOverviewFormComponent } from './components/dialog-overview-form/dialog-overview-form.component';
+import { PaginaEstudianteComponent } from './components/pagina-estudiante/pagina-estudiante.component';
+import { TablaFilaEstudiantesComponent } from './components/tabla-fila-estudiantes/tabla-fila-estudiantes.component';
+import { DialogFormEstudianteComponent } from './components/dialog-form-estudiante/dialog-form-estudiante.component';
 
 
 @NgModule({
@@ -66,7 +69,10 @@ import { DialogOverviewFormComponent } from './components/dialog-overview-form/d
     PaginaInicioComponent,
     FilaComponent,
     NavMenuComponent,
-    DialogOverviewFormComponent
+    DialogOverviewFormComponent,
+    PaginaEstudianteComponent,
+    TablaFilaEstudiantesComponent,
+    DialogFormEstudianteComponent
 
   ],
   imports: [

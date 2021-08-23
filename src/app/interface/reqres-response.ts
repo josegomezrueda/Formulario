@@ -1,5 +1,5 @@
-export interface ReqResResponse {
-    id_persona:       number;
+export interface Persona {
+    id:       number;
     user:             string;
     password:         string;
     surname:          string;
@@ -12,9 +12,9 @@ export interface ReqResResponse {
     termination_date: Date
 }
 
-export function ReqResResponse_BLANK(): ReqResResponse {
+export function ReqResResponse_BLANK(): Persona {
     const aux = {
-    id_persona:       null,
+    id:       null,
     user:             null,
     password:         null,
     surname:          null,

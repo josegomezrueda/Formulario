@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "backend": "json-server --watch db.json --id id_persona"
+    "backend": "json-server --watch db.json --id id"
   },
   "private": true,
   "dependencies": {

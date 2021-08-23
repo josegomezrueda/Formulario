@@ -1,7 +1,7 @@
 import { NumberInput } from '@angular/cdk/coercion';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
-import { ReqResResponse, ReqResResponse_BLANK } from 'src/app/interface/reqres-response';
+import { Persona, ReqResResponse_BLANK } from 'src/app/interface/reqres-response';
 import { UsuariosService } from 'src/app/services/usuarios.service';
 
 
@@ -10,8 +10,8 @@ import { UsuariosService } from 'src/app/services/usuarios.service';
   templateUrl: './fila.component.html',
   styleUrls: ['./fila.component.scss']
 })
-export class FilaComponent implements OnInit {
-  @Input() objetoFila: ReqResResponse = ReqResResponse_BLANK();
+export class FilaComponent {
+  @Input() objetoFila: Persona = ReqResResponse_BLANK();
   @Output() miEventoEditar = new EventEmitter<any>();
   @Output() miEventoBorrar = new EventEmitter<any>();
 
@@ -21,16 +21,14 @@ export class FilaComponent implements OnInit {
   }
 
   editardato() {
-    this.id= this.objetoFila.id_persona;
+    this.id= this.objetoFila.id;
     this.router.navigate(['/editar', this.id]);
       }
 
   eliminardato(){
-    this.id= this.objetoFila.id_persona;
+    this.id= this.objetoFila.id;
     this.usuariosService.borrarUsuario(this.id).subscribe();
     this.miEventoBorrar.emit(this.id);
     }
   
-  ngOnInit(): void {
-  }
 }

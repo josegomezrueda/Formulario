@@ -1,0 +1,9 @@
+<div class="infodata">
+    <div class="user" *ngIf="estudiantes.length > 0 else nopeople">
+        <app-tabla-fila-estudiantes *ngFor="let estudiante of estudiantes" [objetoFilaEstudiante]="estudiante" (estudianteEditado)="onEditEstudiante($event)" (estudianteBorrado)="deleteEstudiante($event)"></app-tabla-fila-estudiantes>
+    </div>
+    <ng-template #nopeople><div class='nodata'>No existe ningun estudiante actualmente</div></ng-template>
+    <div>
+        <div><button mat-raised-button (click)="openDialog()">Crear Estudiante</button></div>
+    </div>
+</div> 

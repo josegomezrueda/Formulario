@@ -2,11 +2,11 @@ import { Component, EventEmitter, Inject, OnInit, Output } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-import { ReqResResponse, ReqResResponse_BLANK } from 'src/app/interface/reqres-response';
+import { Persona, ReqResResponse_BLANK } from 'src/app/interface/reqres-response';
 import { UsuariosService } from 'src/app/services/usuarios.service';
 
 export interface DialogData {
-  personas: ReqResResponse[];
+  personas: Persona[];
 }
 
 @Component({
@@ -28,7 +28,7 @@ export class DialogOverviewFormComponent{
     termination_date: []
   })
 
-  private personas: ReqResResponse[]=[];
+  private personas: Persona[]=[];
 
   constructor(
     public dialogRef: MatDialogRef<DialogOverviewFormComponent>,
@@ -43,7 +43,7 @@ export class DialogOverviewFormComponent{
     this.dialogRef.close();
   }
   onClick(): void {
-    let persona: ReqResResponse = this.registerForm.value;
+    let persona: Persona = this.registerForm.value;
     /*
     this.usuarioService.crearUsuario(persona).subscribe(response => {
       persona = response;

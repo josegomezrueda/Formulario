@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, NgControlStatus } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ReqResResponse, ReqResResponse_BLANK } from 'src/app/interface/reqres-response';
+import { Persona, ReqResResponse_BLANK } from 'src/app/interface/reqres-response';
 import { UsuariosService } from 'src/app/services/usuarios.service';
 
 
@@ -13,7 +13,7 @@ import { UsuariosService } from 'src/app/services/usuarios.service';
 export class FormularioComponent implements OnInit {
 
   public id: any;
-  public persona: ReqResResponse = ReqResResponse_BLANK();
+  public persona: Persona = ReqResResponse_BLANK();
 
   constructor(private formBuilder: FormBuilder,
     private route: ActivatedRoute,
@@ -51,7 +51,7 @@ export class FormularioComponent implements OnInit {
   public enviardato() {
     this.persona = this.registerForm.value;
     if (this.id) {
-      this.persona.id_persona = this.id
+      this.persona.id = this.id
       this.usuarioService.editarUsuario(this.persona).subscribe(response => {
         this.persona = response;
         this.router.navigate(['/pagina-inicio'])
