@@ -10,19 +10,6 @@
   ],
   "personas": [
     {
-      "user": "Joselito",
-      "surname": "Gomez",
-      "password": "123",
-      "company_email": "joselillo@gmail.com",
-      "personal_email": "josepersonal@gmail.com",
-      "city": "Jaen",
-      "imagen_url": "foto",
-      "active": true,
-      "created_date": "12/12/2012",
-      "termination_date": "12/12/2013",
-      "id": 1
-    },
-    {
       "user": "Juanillo",
       "surname": "Garcia",
       "password": "145746",

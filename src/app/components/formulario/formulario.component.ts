@@ -18,7 +18,11 @@ export class FormularioComponent implements OnInit {
   constructor(private formBuilder: FormBuilder,
     private route: ActivatedRoute,
     private router:Router,
-    private readonly usuarioService: UsuariosService) { }
+    private readonly usuarioService: UsuariosService,
+    private _ac: ActivatedRoute
+    ) { 
+      this.persona=this._ac.snapshot.data.aplicacion
+    }
 
   registerForm = this.formBuilder.group({
     user: [],

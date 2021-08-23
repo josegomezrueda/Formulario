@@ -1,35 +1,17 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { ActivatedRouteSnapshot, RouterModule, Routes, RoutesRecognized } from '@angular/router';
+import { ErrorComponent } from './components/error/error.component';
 import { FormularioComponent } from './components/formulario/formulario.component';
 import { PaginaEstudianteComponent } from './components/pagina-estudiante/pagina-estudiante.component';
 import { PaginaInicioComponent } from './components/pagina-inicio/pagina-inicio.component';
+import { AplicacionResolver } from './resolvers/resolver';
 
-const routes: Routes = [
-  {
-    path: '',
-    redirectTo: 'pagina-inicio',
-    pathMatch: 'full'
-  },
-  {
-    path: 'pagina-inicio',
-    component: PaginaInicioComponent
-  },
-  {
-    path: 'formulario',
-    component: FormularioComponent
-  },
-  {
-    path: 'pagina-estudiante',
-    component: PaginaEstudianteComponent
-  },
-  {
-    path: 'editar/:id',
-    component: FormularioComponent
-  }
-];
+
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  declarations:[],
+  imports: [],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
