@@ -1,0 +1,21 @@
+
+@import '/src/assets/styles/settings.scss';
+@import '/src/assets/styles/objects.scss';
+@import '/src/assets/styles/components.scss';
+
+* {
+    box-sizing: border-box;
+  }
+
+
+  .barra-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: #222;
+    padding: 5px 20px;
+  }
+
+
+
