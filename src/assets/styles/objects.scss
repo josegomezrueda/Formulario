@@ -1,0 +1,49 @@
+@import '/src/assets/styles/settings.scss';
+
+.botones-genericos{
+display: flex;
+justify-content: center;
+margin: 10px;
+gap: 5px;
+
+    .buttons-titulos{
+
+    background:linear-gradient(to bottom, $color-palette-button-1 5%, $color-palette-button-2 100%);
+    background-color:darkgrey;
+    border-radius:3px;
+    border:1px solid darkgrey;
+    display:inline-block;
+    color:$color-palette-main;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    height: 50px;
+    width: 120px;
+    text-decoration:none;
+
+    }
+}
+
+.elementos-horizontales {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 15px;
+    gap: 10px
+  }
+
+.tarjeta{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    background-color: white;
+    border : 1px solid;
+    border-radius: 15px;
+    div {
+        margin: 5px;
+    }
+
+}

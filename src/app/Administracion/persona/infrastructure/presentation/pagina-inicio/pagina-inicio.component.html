@@ -1,0 +1,13 @@
+
+<h1 class="titulo-h1">Listado personas</h1>
+
+
+<div class="infodata">
+    <div class="user" *ngIf="reqresponse.length > 0 else nopeople">
+        <app-fila *ngFor="let res of reqresponse" [objetoFila]="res" (miEventoBorrar)="deleteElement($event)" ></app-fila>
+    </div>
+    <ng-template #nopeople><div class='nodata'>No existe ninguna persona actualmente</div></ng-template>
+    <div>
+        <div><button mat-raised-button (click)="openDialog()" >Crear Usuario</button></div>
+    </div>
+</div> 

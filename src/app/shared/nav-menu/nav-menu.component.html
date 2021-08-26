@@ -1,0 +1,22 @@
+<nav class='barra-nav'>
+  <div class="botones-genericos">
+    <button class='buttons-titulos' mat-button [matMenuTriggerFor]="persona">Persona</button>
+    <mat-menu #persona="matMenu">
+      <mat-option class='opciones' value="Mostrar datos" routerLink='/'>Mostrar datos</mat-option>
+      <mat-option class='opciones' value="Mostrar formulario" routerLink='/formulario'>Formulario Persona</mat-option>
+    </mat-menu>
+    <button class='buttons-titulos' mat-button [matMenuTriggerFor]="estudiante">Estudiante</button>
+    <mat-menu #estudiante="matMenu">
+      <mat-option class='opciones' value="Crear Estudiante" routerLink='/estudiante/pagina-estudiante'>Estudiantes
+      </mat-option>
+    </mat-menu>
+  </div>
+  <div class='elementos-horizontales'>
+    <div>
+      <mat-icon matBadge={{contador}} matBadgeColor="primary">home</mat-icon>
+    </div>
+    <div>
+      <mat-icon matBadge={{contador2}} matBadgeColor="primary">home</mat-icon>
+    </div>
+  </div>
+</nav>

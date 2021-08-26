@@ -51,18 +51,19 @@ import { OverlayModule } from '@angular/cdk/overlay';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormularioComponent } from './components/formulario/formulario.component';
-import { PaginaInicioComponent } from './components/pagina-inicio/pagina-inicio.component';
-import { FilaComponent } from './components/tabla/fila/fila.component';
+import { FormularioComponent } from './Administracion/persona/infrastructure/presentation/formulario/formulario.component';
+import { PaginaInicioComponent } from './Administracion/persona/infrastructure/presentation/pagina-inicio/pagina-inicio.component';
+import { FilaComponent } from './Administracion/persona/infrastructure/presentation/fila/fila.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
-import { DialogOverviewFormComponent } from './components/dialog-overview-form/dialog-overview-form.component';
-import { PaginaEstudianteComponent } from './components/pagina-estudiante/pagina-estudiante.component';
-import { TablaFilaEstudiantesComponent } from './components/tabla-fila-estudiantes/tabla-fila-estudiantes.component';
-import { DialogFormEstudianteComponent } from './components/dialog-form-estudiante/dialog-form-estudiante.component';
-import { ErrorComponent } from './components/error/error.component';
-import { GlobalErrorHandlerService } from './components/global-error-handler.service';
-import { RoutingModule } from './modules/routing/routing.module';
+import { NavMenuComponent } from './shared/nav-menu/nav-menu.component';
+import { DialogOverviewFormComponent } from './Administracion/persona/infrastructure/presentation/dialog-overview-form/dialog-overview-form.component';
+import { PaginaEstudianteComponent } from './Administracion/estudiante/infrastruture/presentation/pagina-estudiante/pagina-estudiante.component';
+import { TablaFilaEstudiantesComponent } from './Administracion/estudiante/infrastruture/presentation/tabla-fila-estudiantes/tabla-fila-estudiantes.component';
+import { DialogFormEstudianteComponent } from './Administracion/estudiante/infrastruture/presentation/dialog-form-estudiante/dialog-form-estudiante.component';
+import { ErrorComponent } from './shared/error/error.component';
+import { GlobalErrorHandlerService } from './shared/error/global-error-handler.service';
+
+
 
 
 @NgModule({
@@ -80,7 +81,6 @@ import { RoutingModule } from './modules/routing/routing.module';
 
   ],
   imports: [
-    RoutingModule,
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
